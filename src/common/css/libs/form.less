@@ -1,0 +1,60 @@
+.form-body {
+    background: #fff;
+}
+.form-group {
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #eee;
+    &:first-child {
+        border: none;
+    }
+    font-size: 0.5rem;
+    height: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    label {
+        flex: none;
+        height: 0.5rem;
+        width: 2rem;
+        color: #666;
+    }
+    input,select {
+        height: 0.5rem;
+        line-height: 0.5rem;
+        width: 0;
+        color: #333;
+        flex: 1 1 auto;
+        border: none;
+    }
+
+    .support-bank {
+        align-self: flex-end;
+        flex: 0 0 auto;
+        width: 1.3rem;
+        text-align: center;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #3ba3f2;
+    }
+    .get-verify-sms-btn {
+        flex: 0 0 auto;
+        align-self: flex-end;
+        width: 1.3rem;
+        height: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            border-left: 1px solid #3ba3f2;
+            text-align: center;
+            color: #3ba3f2;
+        }
+    }
+}
+
+

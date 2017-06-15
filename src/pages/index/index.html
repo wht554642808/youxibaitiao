@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no,address=no">
+    <title>速领薪</title>
+
+
+    <script>
+        (function () {
+            function initFontSize() {
+                var _htmlNode = document.getElementsByTagName('html')[0];
+//                为什么要采用height，是因为手机有可能横屏
+                var _viewportWidth = Math.min(document.documentElement.clientWidth, document.documentElement.clientHeight);
+
+                console.log(_viewportWidth);
+                if (_viewportWidth < 10) {
+                    alert('有问题！找吴海涛');
+                }
+
+//                _htmlNode.style.fontSize = '100px';  作用？？？？？？？？？？？？？？？？？？？？？？？？？
+                if (_viewportWidth < 320) {
+                    _viewportWidth = 320;
+                }
+                if (_viewportWidth > 640) {
+                    _viewportWidth = 640;
+                }
+                //*100的目的是chrome的font-size设置为12px以下都会被置为12px
+                _htmlNode.style.fontSize = _viewportWidth / 750 * 100 + 'px';
+            }
+            initFontSize();
+        })();
+    </script>
+
+</head>
+<body>
+
+<div id="app">
+
+    <transition :name="transitionName">
+        <router-view class="child-view"></router-view>
+    </transition>
+
+</div>
+
+
+
+<hint></hint>
+<superman></superman>
+
+</body>
+</html>
